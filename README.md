@@ -7,8 +7,8 @@ A simple real-time log viewer using **Node.js**, **Express**, and **Socket.io**.
 
 1. **Clone the repository**  
    ```sh
-   git clone <repo-url>
-   cd <repo-name>
+   git clone [<repo-url>](https://github.com/Surajpatra700/Log_Watching_Solution.git)
+   cd Log_Watching_Solution
    ```
 
 2. **Install dependencies**  
