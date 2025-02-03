@@ -1,0 +1,14 @@
+2025-02-03 10:15:23 [INFO] Application started successfully.
+2025-02-03 10:15:25 [DEBUG] Initializing database connection.
+2025-02-03 10:15:26 [INFO] Database connected: host=127.0.0.1, port=5432.
+2025-02-03 10:15:30 [WARNING] High memory usage detected: 85%.
+2025-02-03 10:15:35 [ERROR] Failed to load configuration file: config.yaml not found.
+2025-02-03 10:15:40 [DEBUG] Retrying configuration load (attempt 1).
+2025-02-03 10:15:45 [INFO] Configuration loaded successfully.
+2025-02-03 10:15:50 [DEBUG] Processing user request: user_id=12345.
+2025-02-03 10:15:55 [INFO] Request processed successfully: status=200.
+2025-02-03 10:16:00 [ERROR] Timeout occurred while connecting to external API.
+2025-02-03 10:16:05 [DEBUG] Retrying API connection (attempt 1).
+2025-02-03 10:16:10 [INFO] API connection established successfully.
+2025-02-03 10:16:15 [WARNING] Disk space running low: 10% remaining.
+2025-02-03 10:16:20 [CRITICAL] System shutting down due to low resources.

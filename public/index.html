@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Log Viewer</title>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif; background-color: #222;
+            color: #fff; padding: 20px;
+        }
+        pre {
+            background-color: #333;
+            padding: 10px;
+            border-radius: 5px;
+            height: 300px;
+            overflow-y: auto;
+        }
+    </style>
+</head>
+<body>
+    <h2>Real-Time Log Viewer</h2>
+    <div id="logs">Loading Logs...</div>
+    <script src="http://localhost:5000/socket.io/socket.io.js"></script> <!-- Intialised Socket Source for JS(User side)-->
+    <script>
+        
+        const socket = io(); // initialised Socket to client side
+        
+        // Load last 10 lines when client connects
+        socket.on("initialLogs", (logs)=>{
+            document.getElementById("logs").textContent = logs;
+        });
+
+        // Appending new logs in realtime
+        socket.on("newLog", (log)=>{
+            const logsDiv = document.getElementById("logs"); // Extracts log from pre id = "log"
+            logsDiv.textContent += "\n" + log;
+            logsDiv.scrollTop = logElement.scrollHeight; // auto scrolling
+        });
+        
+    </script>
+</body>
+</html>
